@@ -1,7 +1,7 @@
-name: Sneed
+name: Windoge98
 
 description: >
-    A 'blank canvas' DAO designed to enable the community to innovate, Sneed offers an accessible, open platform for creative and technological exploration on the Internet Computer Protocol.
+    A 'blank canvas' DAO designed to enable the community to innovate, Windoge98 offers an accessible, open platform for creative and technological exploration on the Internet Computer Protocol.
 
 # This is currently a placeholder field and must be left empty for now.
 Principals: []
@@ -16,66 +16,67 @@ url: https://4pk43-5qaaa-aaaag-qc44a-cai.icp0.io/
 # shown only in the NNS proposal.
 NnsProposal:
     # The title of the NNS proposal.
-    title: "NNS Proposal to create an SNS DAO named 'Sneed DAO'"
+    title: "NNS Proposal to create Windoge98 SNS DAO"
 
     # The HTTPS address of additional content required to evaluate the NNS
     # proposal.
-    url: "https://forum.dfinity.org/t/proposal-to-create-an-sns-dao-for-sneed/24975"
+    url: "https://forum.dfinity.org/t/proposal-to-create-an-sns-dao-for-w98/24975"
 
     # The description of the proposal. 
     summary: |
         **I. Vision and Purpose**
 
-        The core vision of Sneed DAO is to provide a community-driven ‘blank canvas’ model SNS DAO (as pioneered by SNS-1) to the ICP community and ecosystem.
-        This model enables ICP community members and developers from all over the world to join and participate in shaping the DAO through proposals covering anything from new technological solutions to community-building projects, following the motto ‘by the community, for the community’.
-        For more details please read our full SNS proposal posted on the DFINITY forums (please see link above).
+        Windoge98 is an ecosystem project that was released in November 2023. Since then, it has grown into the largest "memecoin" project on the Internet Computer. Windoge98 has chosen the SNS route primarily for the following reasons:
+        - It provides us an easily upgradable, standardized, and secure token ledger.
+        - Additional security for our $2 million USD+ in various assets such as liquidity pools and treasury.
+        - Provides a DAO system allowing us to easily gather community consensus.
+        - Allows us to decentralize our apps.
+        - Allows us to sell a small amount of treasury in the launchpad sale to increase our operating budget.
 
-        *dApp:*
+        *dApps:*
 
-        The Sneed converter dApp lets users convert their OLD Sneed tokens (currently in circulation) to the NEW Sneed DAO token, created for the Sneed SNS. 
+        - Windoge98 Website: The main landing page of windoge98.com
+        - Windoge98 Desktop: A unique desktop themed frontend with a dapp store. desktop.windoge98.com
+        - Microstore: Dapp that allows anyone to permissionlessly list their dApps inside the desktop that other users can install.
+        - Dogvertiser: Dogvertiser is a lightweight proof of concept that allows users to create advertisements that appear on the Windoge98 homepage and as popups in the desktop dapp. dogverts.windoge98.com
+        - Storage Bucket: The storage bucket stores user uploaded assets like desktop wallpapers.
+        - Taggr SNS Bot: Posts SNS project proposals to Taggr every day (was previously on the SNS1 SNS).
 
         **II. Token Distribution**
 
         *Token Details:*
 
-        * Token name: Sneed DAO
-        * Token symbol: SNEED
-        * Total token supply: 10,000 SNEED
-        * Token distribution: 85% treasury, 10% decentralization sale, 5% Sneed founding team.
-        * SNS ledger transaction fee: 0.00001 SNEED
-        * Sneed dApp canister: 5ceyv-syaaa-aaaag-qc43q-cai
+        * Token name: Windoge98
+        * Token symbol: EXE
+        * Total token supply: 19,980,000,000 EXE
+        * Token distribution: 99% treasury, 1% decentralization sale
+        * SNS ledger transaction fee: 0.0001 EXE
+        * Windoge98 dApp canister: 5ceyv-syaaa-aaaag-qc43q-cai
 
         Important note regarding token distribution! 
 
-        The 85% treasury, 10% decentralization sale, 5% Sneed founding team allocation is the starting distribution specified by the SNS initialization parameters. 
-        Because there is already an existing OLD Sneed token in circulation which will be convertible 1:1 (minus transaction fees) to the NEW Sneed DAO token created for the SNS, the following will end up becoming the actual allocation:
+        The 99% treasury, 1% decentralization sale is the starting distribution specified by the SNS initialization parameters. 
+        Because there is already an existing OLD Windoge98 token in circulation which will be convertible 1:1998 (minus transaction fees) to the NEW Windoge98 DAO token created for the SNS, the following will end up becoming the actual allocation:
 
-        19.5% treasury, 10% decentralization sale, 10% Sneed founding team, 60.1% Sneed converter dApp, and about 0.4% Burned. 
+        14% treasury, 1% decentralization sale, 83.6% EXE converter dApp, and about 1.4% Burned. 
 
-        The reason is that a majority of the NEW Sneed DAO tokens in the treasury will be sent to the Sneed converter dApp, so that holders of the OLD Sneed token can convert them to the NEW Sneed DAO token. 
-        The Sneed founding team will (after burning 500 of their OLD Sneed tokens) own 500 OLD Sneed tokens and 500 NEW Sneed DAO tokens. 
-        After converting their OLD Sneed tokens to NEW Sneed DAO tokens, the Sneed founding team will end up with 1,000 NEW Sneed DAO tokens, or 10% of the supply. 
-        500 of the Sneed founding team's NEW Sneed DAO tokens will be locked in a neuron with 8 months vesting time and 1 month dissolve delay, and 500 will not be locked. 
-
+        The reason is that a majority of the NEW Windoge98 DAO tokens in the treasury will be sent to the Windoge98 converter dApp, so that holders of the OLD Windoge98 token can convert them to the NEW Windoge98 DAO token. 
+      
         **III. Governance and Token Management**
 
-        Post-sale, the Sneed Team will propose a series of actions:
-        * Burn a corresponding amount of NEW Sneed DAO tokens as have been burnt from the OLD Sneed token supply (about 40 SNEED).
-        * Burn the OLD Sneed token reserve (1,950 OLD Sneed in treasury, 1,000 OLD Sneed reserved for the SNS sale). 
-        * Burn 500 of the 1,000 OLD Sneed tokens owned by the Sneed founding team. 
-        * Send about 6,510 NEW Sneed DAO tokens (6,550 minus the amount of NEW Sneed DAO tokens burned in previous step) to the Sneed converter dApp, leaving 1,950 NEW Sneed DAO tokens in the SNS treasury (matching OLD Sneed token treasury).
-
-        Burning 3,450 OLD Sneed tokens, and with about 40 OLD Sneed tokens already burned, gives 3,490 OLD Sneed tokens burned in total. This leaves about 6,510 OLD Sneed tokens in circulation. This matches the amount of NEW Sneed DAO tokens sent to the converter dApp, ensuring that all OLD Sneed tokens can be converted 1:1 (minus transaction fees) to new Sneed DAO tokens using the Sneed converter dApp. 
+        Post-sale, the Windoge98 Team will propose a series of actions:
+        * Burn a corresponding amount of NEW EXE DAO tokens as have been burnt from the OLD Windoge98 token supply (about 1.4% of total supply).
+        * Send remaining amount minus treasury (84%) of NEW Windoge98 DAO tokens to the token swap canister to allow users to convert from the old token to the new token.
 
         *Governance Parameters:*
 
-        * Minimum stake: 0.01 SNEED
-        * Minimum dissolve delay for voting: 1 Month
-        * Maximum dissolve delay for bonus: 6 Months
+        * Minimum stake: 1 EXE
+        * Minimum dissolve delay for voting: 2 Weeks
+        * Maximum dissolve delay for bonus: 1 Year
         * Voting Rewards: 0% 
-        * Maximum dissolve delay vp bonus (for 6 Months): 100%
+        * Maximum dissolve delay vp bonus (for 1 year): 100%
         * Maximum age for age bonus: 1 year
-        * Maximum age bonus: 25%
+        * Maximum age bonus: 100%
 
         **IV. Decentralization Sale**
 
@@ -90,7 +91,7 @@ NnsProposal:
         * Number of neurons: 2
         * Dissolve delay of neurons: 0 and 30 days 
         * Restricted_countries:
-        US, KP, CU, SD, SY, IR, VE
+
 # If the SNS launch attempt fails, control over the dapp canister(s) is given to
 # these principals. In most use cases, this is chosen to be the original set of
 # controller(s) of the dapp. Must be a list of PrincipalIds.
@@ -113,13 +114,13 @@ dapp_canisters:
 # of the SNS.
 Token:
     # The name of the token issued by the SNS ledger.
-    name: Sneed DAO
+    name: Windoge98
 
     # The symbol of the token issued by the SNS Ledger.
-    symbol: SNEED
+    symbol: EXE
 
     # SNS ledger transaction fee.
-    transaction_fee: 1000 e8s
+    transaction_fee: 100_000 e8s
 
     # Path to the SNS token logo 
     logo: logo.png
@@ -130,13 +131,13 @@ Token:
 Proposals:
     # The cost of making an SNS proposal that is rejected by the SNS neuron
     # holders. This field is specified as a token. For example: "1 token".
-    rejection_fee: 0.1 token
+    rejection_fee: 10 tokens
 
     # The initial voting period of an SNS proposal. A proposal's voting period
     # may be increased during its lifecycle due to the wait-for-quiet algorithm
     # (see details below). This field is specified as a duration. For example
     # "4 days".
-    initial_voting_period: 4 days
+    initial_voting_period: 5 days
 
     # The wait-for-quiet algorithm extends the voting period of a proposal when
     # there is a flip in the majority vote during the proposal's voting period.
@@ -146,7 +147,7 @@ Proposals:
 Neurons:
     # The minimum amount of SNS tokens to stake a neuron. This field is specified
     # as a token. For instance, "1 token".
-    minimum_creation_stake: 0.01 tokens
+    minimum_creation_stake: 10 tokens
 
 # Configuration of SNS voting.
 Voting:
@@ -158,7 +159,7 @@ Voting:
     #
     # Users cannot access the SNS tokens used to stake neurons (until the neuron
     # is dissolved). This field is specified as a duration. For example: "6 months".
-    minimum_dissolve_delay: 1 month
+    minimum_dissolve_delay: 2 weeks
 
     # Configuration of voting power bonuses that are applied to neurons to
     # incentivize alignment with the best interest of the DAO. Note, these
@@ -189,7 +190,7 @@ Voting:
             # This parameter sets the maximum dissolve delay a neuron can have.
             # When reached, the maximum dissolve delay bonus will be applied.
             # This field is specified as a duration. For example: "8 years".
-            duration: 6 months
+            duration: 3 months
             # If a neuron's dissolve delay is `duration`, its voting power will
             # be increased by the dissolve delay `bonus` amount. 
             # This field is specified as a percentage. For instance, 
@@ -228,7 +229,7 @@ Voting:
             # This field is specified as a percentage. For instance, 
             # a value of "25%" means that the voting power will increase by a quarter
             # (multiplied by 1.25).
-            bonus: 25%
+            bonus: 100%
 
     # Configuration of SNS voting reward parameters.
     #
@@ -325,7 +326,7 @@ Distribution:
     #      2 million    (governance)
     # + 500 thousand    (swap)
     # --------------
-    total: 10_000 tokens
+    total: 19_980_000_000_000 tokens
 
 # Configuration of the decentralization swap parameters. Choose these parameters
 # carefully, if a decentralization swap fails, the SNS will restore the dapp
@@ -361,7 +362,7 @@ Swap:
     # The maximum amount of ICP that each participant may contribute
     # to participate. This field is specified as a token. For instance,
     # "1 token".
-    maximum_participant_icp: 3_000 tokens
+    maximum_participant_icp: 10_000 tokens
 
     # The text that swap participants must confirm before they may participate
     # in the swap.
@@ -379,14 +380,6 @@ Swap:
     #
     # Each list element must be an ISO 3166-1 alpha-2 country code.
     restricted_countries:
-      - US
-      - KP
-      - CU
-      - SD
-      - SY
-      - IR
-      - VE
-
 
     # Configuration of the vesting schedule of the neuron basket, i.e., the SNS
     # neurons that a participants will receive from a successful
@@ -440,7 +433,7 @@ Swap:
     # The duration of the decentralization swap. When `start_time` is calculated
     # during CreateServiceNervousSystem proposal execution, this `duration` will
     # be added to that absolute time and set as the swap's deadline.
-    duration: 7 days
+    duration: 10 days
 
     # Whether Neurons' Fund participation is requested.
     neurons_fund_participation: false

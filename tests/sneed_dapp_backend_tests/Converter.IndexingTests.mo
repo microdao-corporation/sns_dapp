@@ -40,7 +40,7 @@ module {
         } = ActorSpec;
 
         return describe(
-            "SneedConverter dApp Indexing Tests",
+            "W98Converter dApp Indexing Tests",
             [
                 it(
                     "Indexing account with no transactions should yield zero balance.",

@@ -40,7 +40,7 @@ module {
         } = ActorSpec;
 
         return describe(
-            "SneedConverter dApp Conversion Tests",
+            "W98Converter dApp Conversion Tests",
             [
                 it(
                     "Converting account with no transactions should result in #InsufficientFunds with zero balance.",

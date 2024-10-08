@@ -31,7 +31,7 @@ module {
         } = ActorSpec;
 
         return describe(
-            "SneedConverter dApp Settings Tests",
+            "W98Converter dApp Settings Tests",
             [
                 it(
                     "Calling get_settings should return the current settings.",

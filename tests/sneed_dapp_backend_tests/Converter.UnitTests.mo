@@ -32,7 +32,7 @@ module {
         } = ActorSpec;
 
         return describe(
-            "SneedConverter dApp Unit Tests",
+            "W98Converter dApp Unit Tests",
             [
                 it(
                     "Indexing empty transaction array for old token should yield 0 old balance.",

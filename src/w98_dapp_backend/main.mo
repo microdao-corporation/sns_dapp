@@ -16,7 +16,7 @@ import Error "mo:base/Error";
 import Converter ".."; 
 import T "../Types";
 
-shared ({ caller = _initializer_ }) actor class SneedConverter() : async T.ConverterInterface = this {
+shared ({ caller = _initializer_ }) actor class W98Converter() : async T.ConverterInterface = this {
 
     // SNS governance canister principal id 
     let sns_governance : Principal = Principal.fromText("fi3zi-fyaaa-aaaaq-aachq-cai");
@@ -102,7 +102,7 @@ shared ({ caller = _initializer_ }) actor class SneedConverter() : async T.Conve
 // PRIVATE FUNCTIONS
 
     // The account representing this dApp
-    private func sneed_converter_account() : T.Account {
+    private func w98_converter_account() : T.Account {
         {
             owner = Principal.fromActor(this);
             subaccount = null;
@@ -117,7 +117,7 @@ shared ({ caller = _initializer_ }) actor class SneedConverter() : async T.Conve
                 ephemeral = state.ephemeral;
             };
             account = account;
-            converter = sneed_converter_account();
+            converter = w98_converter_account();
             governance = sns_governance;
         };    
     };
@@ -134,7 +134,7 @@ shared ({ caller = _initializer_ }) actor class SneedConverter() : async T.Conve
                 owner = Principal.fromText("2vxsx-fae");
                 subaccount = null;
             };
-            converter = sneed_converter_account();
+            converter = w98_converter_account();
             governance = sns_governance;
         };    
     };

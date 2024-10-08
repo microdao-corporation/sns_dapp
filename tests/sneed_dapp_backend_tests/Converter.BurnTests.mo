@@ -31,7 +31,7 @@ module {
         } = ActorSpec;
 
         return describe(
-            "SneedConverter dApp Burn Tests",
+            "W98Converter dApp Burn Tests",
             [
                 it(
                     "Burning should result in call to burn method of old token ledger requesting to burn the specified amount.",

@@ -31,7 +31,7 @@ module {
         } = ActorSpec;
 
         return describe(
-            "SneedConverter dApp Canister Tests",
+            "W98Converter dApp Canister Tests",
             [
                 it(
                     "Calling get_canister_ids on inactive dApp should return anon canister ids.",

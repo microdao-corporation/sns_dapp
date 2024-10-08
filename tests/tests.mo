@@ -2,13 +2,13 @@
 import Principal "mo:base/Principal";
 import Debug "mo:base/Debug";
 
-import UnitTests "sneed_dapp_backend_tests/Converter.UnitTests";
-import ActivationTests "sneed_dapp_backend_tests/Converter.ActivationTests";
-import IndexingTests "sneed_dapp_backend_tests/Converter.IndexingTests";
-import ConversionTests "sneed_dapp_backend_tests/Converter.ConversionTests";
-import BurnTests "sneed_dapp_backend_tests/Converter.BurnTests";
-import SettingsTests "sneed_dapp_backend_tests/Converter.SettingsTests";
-import CanisterTests "sneed_dapp_backend_tests/Converter.CanisterTests";
+import UnitTests "w98_dapp_backend_tests/Converter.UnitTests";
+import ActivationTests "w98_dapp_backend_tests/Converter.ActivationTests";
+import IndexingTests "w98_dapp_backend_tests/Converter.IndexingTests";
+import ConversionTests "w98_dapp_backend_tests/Converter.ConversionTests";
+import BurnTests "w98_dapp_backend_tests/Converter.BurnTests";
+import SettingsTests "w98_dapp_backend_tests/Converter.SettingsTests";
+import CanisterTests "w98_dapp_backend_tests/Converter.CanisterTests";
 
 import ActorSpec "/utils/ActorSpec";
 import TestUtil "/utils/TestUtil";

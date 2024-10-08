@@ -1,4 +1,4 @@
-import { sneed_dapp_backend } from "../../declarations/sneed_dapp_backend";
+import { w98_dapp_backend } from "../../declarations/w98_dapp_backend";
 import { Principal } from "@dfinity/principal";
 
 var d8 = Number(100000000);
@@ -77,7 +77,7 @@ document.getElementById("convert").addEventListener("click", async (e) => {
 
   document.getElementById("result").innerHTML = "<img src='loading-gif.gif' width='48' height='48' />";
 
-  const result = await sneed_dapp_backend.convert_account(account);
+  const result = await w98_dapp_backend.convert_account(account);
 
   const ok = result["Ok"];
   if (ok) {
@@ -137,7 +137,7 @@ document.querySelector("form").addEventListener("submit", async (e) => {
 
   document.getElementById("balance").innerHTML = "<img src='loading-gif.gif' width='48' height='48' />";
 
-  const result = await sneed_dapp_backend.get_account(account);
+  const result = await w98_dapp_backend.get_account(account);
     
   const ok = result["Ok"];
   if (ok) {
@@ -152,7 +152,7 @@ document.querySelector("form").addEventListener("submit", async (e) => {
 
     }
 
-    document.getElementById("balance").innerHTML = balance + " SNEED";
+    document.getElementById("balance").innerHTML = balance + " W98";
 
   } else {
 
@@ -165,7 +165,7 @@ document.querySelector("form").addEventListener("submit", async (e) => {
   return false;
 });
 
-let status = await sneed_dapp_backend.get_status();
+let status = await w98_dapp_backend.get_status();
 let active = status["active"];
 if (active) {
   document.getElementById("submit_button").removeAttribute("disabled"); 

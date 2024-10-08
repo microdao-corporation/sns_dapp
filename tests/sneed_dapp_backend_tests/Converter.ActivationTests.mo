@@ -30,7 +30,7 @@ module {
         } = ActorSpec;
 
         return describe(
-            "SneedConverter dApp Activation Tests",
+            "W98Converter dApp Activation Tests",
             [
                 it(
                     "Should not be able to call get_account before activation.",

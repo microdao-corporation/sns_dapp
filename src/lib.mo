@@ -1,33 +1,33 @@
-// This is the code for the "SneedUpgrade" Converter dApp,
+// This is the code for the "W98Upgrade" Converter dApp,
 // which lets users convert from OLD tokens to NEW tokens,
-// In this case from their OLD (pre-SNS) SNEED tokens into
-// NEW (SNS) SNEED tokens.
+// In this case from their OLD (pre-SNS) W98 tokens into
+// NEW (SNS) W98 tokens.
 //
 // The dApp works as follows:
-// A user can send OLD SNEED tokens to the dApp's backend canister's principal id.
+// A user can send OLD W98 tokens to the dApp's backend canister's principal id.
 // Doing so builds up a balance on the dApp for the account.
 // The user can then convert the balance for their account by calling the dApp's "convert" function (available via
 // the dApp's frontend web page UX), providing the principal id (and, optionally, subaccount) of the account they 
-// used to send OLD SNEED to the dApp.
+// used to send OLD W98 to the dApp.
 //
 // The dApp does not require login to use. This means that any user can ask for any account with a balance 
-// on the dApp (that has sent OLD SNEED to the dApp) to have that balance converted from OLD SNEED to NEW SNEED,
-// which are then sent back to the account the OLD SNEED was sent from.
+// on the dApp (that has sent OLD W98 to the dApp) to have that balance converted from OLD W98 to NEW W98,
+// which are then sent back to the account the OLD W98 was sent from.
 //
-// This is not considered a risk, as the prompt conversion from OLD SNEED to NEW SNEED is the only purpose for  
-// sending OLD SNEED to the dApp, and as the conversion to NEW SNEED is the only meaningful usecase
-// for OLD SNEED tokens after the launch of the Sneed SNS and the NEW SNEED token.
+// This is not considered a risk, as the prompt conversion from OLD W98 to NEW W98 is the only purpose for  
+// sending OLD W98 to the dApp, and as the conversion to NEW W98 is the only meaningful usecase
+// for OLD W98 tokens after the launch of the W98 SNS and the NEW W98 token.
 //
 // The dApp keeps track of an account's balance in the following way:
-// It starts by asking the OLD SNEED indexer (SneedScan) and the NEW SNEED indexer (The indexer canister
+// It starts by asking the OLD W98 indexer (W98Scan) and the NEW W98 indexer (The indexer canister
 // automatically created for a new SNS token) for all transactions involving the specified account.
 // 
 // Then the dApp computes a "balance" for the account by: 
-//  - increasing the balance for all OLD SNEED tokens sent to the dApp from the account
-//  - decreasing the balance for all NEW SNEED tokens sent from the dApp to the account
-//  - increasing the balance for all NEW SNEED tokens sent from the account to the dApp
+//  - increasing the balance for all OLD W98 tokens sent to the dApp from the account
+//  - decreasing the balance for all NEW W98 tokens sent from the dApp to the account
+//  - increasing the balance for all NEW W98 tokens sent from the account to the dApp
 //    (This is for the initial Seeding transactions, but also so that if anyone sends 
-//     NEW SNEED to the dApp by mistake they can reclaim it by calling the "convert" function).
+//     NEW W98 to the dApp by mistake they can reclaim it by calling the "convert" function).
 //
 // LEGEND: 
 // Variables beginning with "new_" represent entities and token amounts for the NEW token.
@@ -98,14 +98,14 @@ module {
 
     // An account sending this amount or more of the NEW token to the dApp is considered a "Seeder".
     // Seeders cannot use the "convert" function to return their funds if "allow_seeder_conversions" is false. 
-    // This is expected to be the SNS Treasury, providing the NEW SNEED tokens for conversion.
+    // This is expected to be the SNS Treasury, providing the NEW W98 tokens for conversion.
     //stable var new_seeder_min_amount_d8 : T.Balance = 10_000;          - DEV! NEVER USE IN PRODUCTION!
     let new_seeder_min_amount_d8 : T.Balance = 100_000_000_000; // 1000 NEW tokens
 
     // An account sending this amount or more of the OLD token to the dApp is considered a "Burner".
     // Burners cannot use the "convert" function to convert their funds if "allow_burner_conversions" is false. 
     // Burners cannot use the "refund" function to reclaim their funds if "allow_burner_refunds" is false. 
-    // This is expected to be the Sneed Team, providing the OLD SNEED tokens for burning.
+    // This is expected to be the W98 Team, providing the OLD W98 tokens for burning.
     //stable var old_burner_min_amount_d12 : T.Balance = 100;              - DEV! NEVER USE IN PRODUCTION!
     //stable var old_burner_min_amount_d12 : T.Balance = 1_000_000_000;   // - TEST! NEVER USE IN PRODUCTION!  // 0.01 OLD tokens
     let old_burner_min_amount_d12 : T.Balance = 1000_000_000_000_000;  // 1000 OLD tokens
@@ -698,7 +698,7 @@ module {
     var old_latest_send_found = false;
 
     // Assign an instance of the this dApp's account to a local variable for efficiency.
-    let sneed_converter_dapp = context.converter;
+    let w98_converter_dapp = context.converter;
 
     // Iterate over all the OLD token transactions for the account
     for (tx in transactions.vals()) {
@@ -727,12 +727,12 @@ module {
 
             // This transaction is from the dApp to the account. 
             // Increase the old_sent_dapp_to_acct_d12 counter by the amount.
-            if (CompareAccounts(transfer.from, sneed_converter_dapp)) { old_sent_dapp_to_acct_d12 := old_sent_dapp_to_acct_d12 + transfer.amount; };
+            if (CompareAccounts(transfer.from, w98_converter_dapp)) { old_sent_dapp_to_acct_d12 := old_sent_dapp_to_acct_d12 + transfer.amount; };
 
             // This transaction is from the account to the dApp. 
             // Increase the old_sent_acct_to_dapp_d12 counter by the amount minus the OLD token fee.
             // NB: In the OLD token, the amount is inclusive of the fee.
-            if (CompareAccounts(transfer.to, sneed_converter_dapp)) { old_sent_acct_to_dapp_d12 := old_sent_acct_to_dapp_d12 + (transfer.amount - settings.old_fee_d12); };
+            if (CompareAccounts(transfer.to, w98_converter_dapp)) { old_sent_acct_to_dapp_d12 := old_sent_acct_to_dapp_d12 + (transfer.amount - settings.old_fee_d12); };
 
           }
         };
@@ -794,7 +794,7 @@ module {
     var new_latest_send_found = false;
 
         // Assign an instance of the this dApp to a local variable for efficiency.
-    let sneed_converter_dapp = context.converter;
+    let w98_converter_dapp = context.converter;
 
     // Iterate over all the NEW token transactions for the account
     for (transaction in transactions.vals()) {
@@ -827,11 +827,11 @@ module {
             // This transaction is from the dApp to the account. 
             // Increase the new_sent_dapp_to_acct_d8 counter by the amount plus the NEW token fee.
             // In the NEW token, the amount is exclusive of the fee.
-            if (CompareAccounts(transfer.from, sneed_converter_dapp)) { new_sent_dapp_to_acct_d8 := new_sent_dapp_to_acct_d8 + (transfer.amount + settings.new_fee_d8) };
+            if (CompareAccounts(transfer.from, w98_converter_dapp)) { new_sent_dapp_to_acct_d8 := new_sent_dapp_to_acct_d8 + (transfer.amount + settings.new_fee_d8) };
 
             // This transaction is from the account to the dApp. 
             // Increase the new_sent_acct_to_dapp_d8 counter by the amount.
-            if (CompareAccounts(transfer.to, sneed_converter_dapp)) { new_sent_acct_to_dapp_d8 := new_sent_acct_to_dapp_d8 + transfer.amount; };
+            if (CompareAccounts(transfer.to, w98_converter_dapp)) { new_sent_acct_to_dapp_d8 := new_sent_acct_to_dapp_d8 + transfer.amount; };
 
           };
         };
